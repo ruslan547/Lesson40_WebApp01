@@ -1,5 +1,6 @@
 package by.itClass.servlets;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -11,6 +12,11 @@ import java.io.IOException;
 public class MyController extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         System.out.println("servlet doGet");
+//        RequestDispatcher rd = request.getRequestDispatcher("/form.html");
+//        rd.forward(request, response);
+
+//        response.sendRedirect("/webapp1/form.html");
+        response.sendRedirect("http://vk.com");
     }
 
     @Override
